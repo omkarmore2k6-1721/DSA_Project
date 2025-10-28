@@ -12,9 +12,10 @@ void getDateInput(char *date) {
 
     if (choice == 1) {
 
-        t = time(NULL);
-        tm = *localtime(&t);
+        t = time(NULL);//time(NULL) returns the current time in seconds
+        tm = *localtime(&t);//converts the time in t to local time (year, month, day, hour, etc.)
         sprintf(date, "%02d-%02d-%04d", tm.tm_mday, tm.tm_mon+1, tm.tm_year+1900);
+        //It writes the formatted output into a character array (string).
 
     } else if (choice == 2) {
 
@@ -43,7 +44,10 @@ void getAmount(float *amount) {
     do {
 
         printf("\nSelect Amount: 1.100 \n2.500 \n3.1000 \n4.Other\nEnter: ");
-        if (scanf("%d", &choice) != 1) { while(getchar() != '\n'); continue; }
+        if (scanf("%d", &choice) != 1) { 
+            while(getchar() != '\n'); 
+            continue; 
+        }
         while(getchar() != '\n');
 
         switch(choice) {

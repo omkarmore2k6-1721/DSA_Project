@@ -24,8 +24,16 @@ struct TreeNode* deleteBST(struct TreeNode* root, int id) {
     if(id < root->data.id) root->left = deleteBST(root->left, id);
     else if(id > root->data.id) root->right = deleteBST(root->right, id);
     else {
-        if(!root->left) { struct TreeNode* temp = root->right; free(root); return temp; }
-        else if(!root->right) { struct TreeNode* temp = root->left; free(root); return temp; }
+        if(!root->left) { 
+            struct TreeNode* temp = root->right; 
+            free(root); 
+            return temp; 
+        }
+        else if(!root->right) {
+            struct TreeNode* temp = root->left;
+            free(root); 
+            return temp; 
+        }
         struct TreeNode* temp = findMin(root->right);
         root->data = temp->data;
         root->right = deleteBST(root->right, temp->data.id);

@@ -1,6 +1,8 @@
 #include "expense.h"
 
-void initStack() { undoStack.top = -1; }
+void initStack() { 
+    undoStack.top = -1; 
+}
 
 void push(struct Expense e) {
     if (undoStack.top < MAX - 1)
@@ -14,4 +16,6 @@ struct Expense pop() {
     return empty;
 }
 
-int isStackEmpty() { return undoStack.top == -1; }
+int isStackEmpty() { 
+    return undoStack.top == -1; 
+}

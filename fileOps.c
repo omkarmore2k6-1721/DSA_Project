@@ -3,12 +3,13 @@
 
 void saveToFile() {
     FILE *fp = fopen("expenses.txt", "w");
-    
+
     if(!fp) { 
-        printf("Error saving file!\n"); return; 
+        printf("Error saving file!\n"); 
+        return; 
     }
 
-    fprintf(fp, "%-5s %-12s %-15s %-10s %-s\n", "ID", "DATE", "CATEGORY", "AMOUNT", "DESCRIPTION");
+    fprintf(fp, "%-5s %-12s %-15s %-10s %-s\n", "ID", "DATE", "CATEGORY", "AMOUNT", "DESCRIPTION");// %-5s is for allocating 5 chars space.
     fprintf(fp, "---------------------------------------------------------------\n");
 
     struct Node* temp = head;
