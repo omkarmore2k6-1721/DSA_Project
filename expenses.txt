@@ -1,3 +1,8 @@
 ID    DATE         CATEGORY        AMOUNT     DESCRIPTION
 ---------------------------------------------------------------
-1     28-10-2025   Travel          500.00     eat in pune
+6     20/10/2025   Other           1000.00    jnsd
+5     28-10-2025   Shopping        100.00     mka
+4     29-10-2025   Entertainment   200.00     watch movie
+3     29-10-2025   Food            500.00     eat pizza
+2     27-10-2025   Entertainment   100.00     xyz
+1     28-10-2025   Travel          1000.00    home to pune bus ticket

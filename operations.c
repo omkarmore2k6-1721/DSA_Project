@@ -39,6 +39,8 @@ void addExpense() {
 }
 
 void deleteExpense() {
+    //printf("All expenses\n");
+    viewLinkedList();
     int id;
     printf("Enter ID to delete: ");
     scanf("%d",&id); while(getchar()!='\n');
