@@ -3,36 +3,35 @@
 #include "expense.h"
 
 void addToLinkedList(struct Expense e) {
-    struct Node* newNode = (struct Node*)malloc(sizeof(struct Node));
-    newNode->data = e;
-    newNode->next = head;
-    head = newNode;
+    struct Node* n = (struct Node*)malloc(sizeof(struct Node));
+    n->data = e; 
+    n->next = head; 
+    head = n;
 }
 
 void deleteFromLinkedList(int id) {
-    struct Node* temp = head;
-    struct Node* prev = NULL;
-    while (temp != NULL && temp->data.id != id) {
-        prev = temp;
-        temp = temp->next;
+    struct Node* t = head; struct Node* p = NULL;
+    while (t && t->data.id != id) { 
+        p = t; 
+        t = t->next; 
     }
-    if (!temp) return;
-    if (!prev) head = head->next;
-    else prev->next = temp->next;
-    free(temp);
+    if (!t) return;
+    if (!p) head = head->next; 
+    else p->next = t->next;
+    free(t);
 }
 
 void viewLinkedList() {
-    struct Node* temp = head;
-    if (!temp) {
-        printf("\nNo expenses.\n");
+    struct Node* t = head;
+    if (!t) { 
+        printf("\nNo expenses.\n"); 
         return;
-    }
+     }
     printf("\n------ Expense List ------\n");
-    while (temp) {
+    while (t) {
         printf("ID:%d | %s | %s | %.2f | %s\n",
-               temp->data.id, temp->data.date, temp->data.category,
-               temp->data.amount, temp->data.description);
-        temp = temp->next;
+               t->data.id, t->data.date, t->data.category,
+               t->data.amount, t->data.description);
+        t = t->next;
     }
 }

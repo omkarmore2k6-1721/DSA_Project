@@ -1,2 +1,4 @@
 ID    DATE         CATEGORY        AMOUNT     DESCRIPTION
 ---------------------------------------------------------------
+2     04-11-2025   Travel          500.00     cjckck
+1     04-11-2025   Food            100.00     ee

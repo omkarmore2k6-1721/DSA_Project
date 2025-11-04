@@ -1,2 +1,4 @@
 ID    DATE         CATEGORY        AMOUNT     DESCRIPTION
 ---------------------------------------------------------------
+2     03-11-2025   Shopping        100.00     dllk
+1     04-11-2025   Travel          100.00     dkdkd
