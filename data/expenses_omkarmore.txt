@@ -1,0 +1,3 @@
+ID    DATE         CATEGORY        AMOUNT     DESCRIPTION
+---------------------------------------------------------------
+1     03-12-2025   Travel          500.00     xyzjas

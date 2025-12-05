@@ -3,7 +3,9 @@
 
 void saveToFile() {
     FILE *fp = fopen(dataFile, "w");
-    if (!fp) { printf("Error saving file!\n"); return; }
+    if (!fp) { 
+        printf("Error saving file!\n"); return; 
+    }
 
     fprintf(fp, "%-5s %-12s %-15s %-10s %-s\n",
             "ID", "DATE", "CATEGORY", "AMOUNT", "DESCRIPTION");
@@ -35,7 +37,7 @@ void loadFromFile() {
             expenses[count++] = e;
             addToLinkedList(e);
             root = insertBST(root, e);
-            if (e.id >= id_counter) id_counter = e.id + 1;
+            if (e.id >= id_counter) id_counter = e.id + 1;4
         }
     }
     fclose(fp);
